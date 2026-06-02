@@ -1,17 +1,9 @@
-/**
- * SCOREFORGE FRONTEND APPLICATION CORE
- * * Setup Instructions:
- * 1. Navigate to frontend directory: cd frontend
- * 2. Install dependencies: npm install
- * 3. Run localized development node: npm run dev
- */
-
 import React, { useState, useEffect } from 'react';
 import Dashboard from './components/Dashboard';
 import MockForm from './components/MockForm';
 import TestHistory from './components/TestHistory';
 import PerformanceCharts from './components/PerformanceCharts';
-import PerformanceAnalytics from './components/PerformanceAnalytics'; // New Component Imported
+import PerformanceAnalytics from './components/PerformanceAnalytics';
 import { Shield, LayoutDashboard, BarChart3, Database, Sun, Moon } from 'lucide-react';
 
 function App() {
@@ -32,7 +24,7 @@ function App() {
   useEffect(() => {
     const fetchTests = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/tests');
+        const response = await fetch('https://rankflow-api.vercel.app/api/tests');
         if (response.ok) {
           const data = await response.json();
           setTests(data);
