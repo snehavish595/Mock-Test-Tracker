@@ -24,7 +24,7 @@ function App() {
   useEffect(() => {
     const fetchTests = async () => {
       try {
-        const response = await fetch('https://rankflow-api.vercel.app/api/tests');
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/tests`);
         if (response.ok) {
           const data = await response.json();
           setTests(data);

@@ -42,7 +42,7 @@ const MockForm = ({ onTestAdded }) => {
     };
 
     try {
-      const response = await fetch('https://rankflow-api.vercel.app/api/tests', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/tests`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(testPayload),
