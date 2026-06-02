@@ -190,7 +190,7 @@ const MockForm = ({ onTestAdded }) => {
                 />
               </div>
               <div>
-                <label className="block text-xs font-medium text-gray-600 dark:text-gray-400 mb-1">Quant / GA</label>
+                <label className="block text-xs font-medium text-gray-600 dark:text-gray-400 mb-1">Quant</label>
                 <input
                   type="number"
                   step="0.01"
